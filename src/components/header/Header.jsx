@@ -5,6 +5,7 @@ import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/images/eco-logo.png";
 import userIcon from "../../assets/images/user-icon.png";
 import { motion } from "framer-motion";
+import { useSelector } from "react-redux";
 const nav_links = [
   {
     path: "home",
@@ -24,12 +25,13 @@ const Header = () => {
   const menuRef = useRef(null);
   const headerRef = useRef(null);
   const menuToggle = () => menuRef.current.classList.toggle("active__menu");
+  const totalQuantity = useSelector((state) => state.cart.totalQuantity);
 
   const stickyHeaderFunc = () => {
     window.addEventListener("scroll", function () {
       if (
-        document.body.scrollTop > 150 ||
-        document.documentElement.scrollTop > 150
+        document.body.scrollTop > 80 ||
+        document.documentElement.scrollTop > 80
       ) {
         headerRef.current.classList.add("sticky__header");
       } else {
@@ -80,7 +82,7 @@ const Header = () => {
               </div>
               <div className="cart__icon">
                 <i className="ri-shopping-basket-2-line"></i>
-                <span className="badge">0</span>
+                <span className="badge">{totalQuantity}</span>
               </div>
               <span>
                 <motion.img src={userIcon} whileTap={{ scale: 1.2 }} alt="" />

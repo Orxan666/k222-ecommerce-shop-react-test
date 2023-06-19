@@ -33,7 +33,7 @@ const products = [
     id: "01",
     productName: "Stone and Beam Westview ",
     imgUrl: productImg01,
-    category: "sofa",
+    category: "kitab",
     price: 193,
     shortDesc:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
