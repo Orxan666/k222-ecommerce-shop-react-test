@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
 const nav_links = [
   {
-    path: "home",
+    path: "",
     display: "Home",
   },
   {

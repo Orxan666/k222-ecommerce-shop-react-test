@@ -21,8 +21,8 @@ const addToCart=()=>{
       imgUrl: item.imgUrl,
     })
   )
-  toast.success("Mehsul sebete elave olundu")
-  localStorage.setItem('products', JSON.stringify(products));
+  
+  toast.success(`${item.productName} sebete elave olundu`)
 }
 
   return (
